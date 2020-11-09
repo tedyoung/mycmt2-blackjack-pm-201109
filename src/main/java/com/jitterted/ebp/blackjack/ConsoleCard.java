@@ -23,4 +23,8 @@ public class ConsoleCard {
                             .cursorLeft(11)
                             .toString(), lines);
   }
+
+  static String displayFirstCard(Hand hand) {
+    return display(hand.cards().get(0));
+  }
 }
