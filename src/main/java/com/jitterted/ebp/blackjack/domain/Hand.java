@@ -1,4 +1,4 @@
-package com.jitterted.ebp.blackjack;
+package com.jitterted.ebp.blackjack.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +56,7 @@ public class Hand {
     return hand.value() < value();
   }
 
-  String displayValue() {
+  public String displayValue() {
     return String.valueOf(value());
   }
 

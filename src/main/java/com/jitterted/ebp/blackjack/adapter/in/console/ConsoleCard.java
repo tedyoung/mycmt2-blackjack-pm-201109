@@ -1,5 +1,8 @@
-package com.jitterted.ebp.blackjack;
+package com.jitterted.ebp.blackjack.adapter.in.console;
 
+import com.jitterted.ebp.blackjack.domain.Card;
+import com.jitterted.ebp.blackjack.domain.Hand;
+import com.jitterted.ebp.blackjack.domain.Rank;
 import org.fusesource.jansi.Ansi;
 
 import java.util.stream.Collectors;
@@ -26,7 +29,7 @@ public class ConsoleCard {
                             .toString(), lines);
   }
 
-  static String displayFirstCard(Hand hand) {
+  public static String displayFirstCard(Hand hand) {
     return display(hand.cards().get(0));
   }
 
