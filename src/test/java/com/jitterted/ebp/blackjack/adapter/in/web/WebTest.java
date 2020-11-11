@@ -36,7 +36,7 @@ public class WebTest {
   public void getGamePageIs200() throws Exception {
     mockMvc.perform(get("/game"))
            .andExpect(status().is2xxSuccessful())
-           .andExpect(model().attributeExists("hands"));
+           .andExpect(model().attributeExists("gameView"));
   }
 
 }

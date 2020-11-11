@@ -16,10 +16,10 @@
 <body>
 
 <h1>Dealer Cards</h1>
-<p th:each="card: ${hands.dealerCards}" th:text="${card}">--</p>
+<p th:each="card: ${gameView.dealerCards}" th:text="${card}">--</p>
 
 <h1>Your Cards</h1>
-<p th:each="card: ${hands.playerCards}" th:text="${card}">--</p>
+<p th:each="card: ${gameView.playerCards}" th:text="${card}">--</p>
 
 
 <br/>
