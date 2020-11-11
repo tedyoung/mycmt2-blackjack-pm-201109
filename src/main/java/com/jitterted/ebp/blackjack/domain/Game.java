@@ -13,6 +13,10 @@ public class Game {
     deck = new Deck();
   }
 
+  public Game(Deck deck) {
+    this.deck = deck;
+  }
+
   public void initialDeal() {
     dealRoundOfCards();
     dealRoundOfCards();
@@ -27,6 +31,8 @@ public class Game {
   public String determineOutcome() {
     if (playerHand.isBusted()) {
       return "You Busted, so you lose.  💸";
+    } else if (playerHand.isBlackjack()) {
+      return "You won Blackjack! 💵";
     } else if (dealerHand.isBusted()) {
       return "Dealer went BUST, Player wins! Yay for you!! 💵";
     } else if (playerHand.beats(dealerHand)) {
