@@ -40,8 +40,14 @@ public class WebTest {
   }
 
   @Test
-  public void postToHitIs200() throws Exception {
+  public void postToHitIsRedirect() throws Exception {
     mockMvc.perform(post("/hit"))
+           .andExpect(status().is3xxRedirection());
+  }
+
+  @Test
+  public void postToStandIsRedirected() throws Exception {
+    mockMvc.perform(post("/stand"))
            .andExpect(status().is3xxRedirection());
   }
 

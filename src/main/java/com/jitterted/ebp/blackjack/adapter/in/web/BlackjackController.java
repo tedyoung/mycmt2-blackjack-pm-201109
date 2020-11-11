@@ -42,6 +42,12 @@ public class BlackjackController {
     return "redirect:/game";
   }
 
+  @PostMapping("/stand")
+  public String standCommand() {
+    game.playerStands();
+    return "redirect:/done";
+  }
+
   @GetMapping("/done")
   public String done(Model model) {
     GameView gameView = new GameView(game);

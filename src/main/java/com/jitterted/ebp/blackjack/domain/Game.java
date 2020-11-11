@@ -44,7 +44,7 @@ public class Game {
     }
   }
 
-  public void dealerTurn() {
+  private void dealerTurn() {
     // Dealer makes its choice automatically based on a simple heuristic (<=16, hit, 17>stand)
     if (!playerHand.isBusted()) {
       while (dealerHand.dealerMustDrawCard()) {
@@ -67,6 +67,7 @@ public class Game {
   }
 
   public void playerStands() {
+    dealerTurn();
     playerDone = true;
   }
 
