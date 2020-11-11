@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml"
 >
 <head>
@@ -15,8 +16,11 @@
 <body>
 
 <h1>Dealer Cards</h1>
+<p th:each="card: ${hands.dealerCards}" th:text="${card}">--</p>
 
 <h1>Your Cards</h1>
+<p th:each="card: ${hands.playerCards}" th:text="${card}">--</p>
+
 
 <br/>
 <h2>Hit or Stand?</h2>
